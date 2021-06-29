@@ -117,7 +117,7 @@ final socials = [
       url: 'https://www.instagram.com/raymondkl_'),
   SocialInfo(
       icon: FaIcon(FontAwesomeIcons.linkedin),
-      url: 'www.linkedin.com/in/raymondk25'),
+      url: 'https://www.linkedin.com/in/raymondk25'),
   SocialInfo(
       icon: FaIcon(FontAwesomeIcons.github),
       url: 'https://github.com/raymondk25'),
