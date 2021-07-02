@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/utils/hover_extensions.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HeaderBody extends StatelessWidget {
   final bool isMobile;
@@ -17,12 +18,25 @@ class HeaderBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AutoSizeText(
-          'Hi! I\'m a Frontend',
+          'Hi! I\'m Raymond',
           style: Theme.of(context).textTheme.headline2,
           maxLines: 1,
         ),
-        AutoSizeText('Developer < / >',
-            style: Theme.of(context).textTheme.headline2, maxLines: 1),
+        // ignore: deprecated_member_use
+        TypewriterAnimatedTextKit(
+          text: [
+            'Frontend-Developer',
+            'Flutter Developer',
+            'UI/UX Designer',
+            'Blogger'
+          ],
+          textStyle: const TextStyle(
+              fontSize: 40, fontWeight: FontWeight.bold, color: Colors.blue),
+          displayFullTextOnTap: true,
+          stopPauseOnTap: true,
+          speed: const Duration(milliseconds: 100),
+          pause: const Duration(milliseconds: 50),
+        ),
         SizedBox(height: 15),
         AutoSizeText(
           'I have experience in building beautiful Web & App with Flutter',

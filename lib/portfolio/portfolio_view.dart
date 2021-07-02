@@ -1,5 +1,6 @@
 import 'package:after_layout/after_layout.dart';
 import 'package:flutter/material.dart';
+import 'package:portofolio_web/aboutMe/aboutMe_view.dart';
 import 'package:portofolio_web/blog/blog_view.dart';
 import 'package:portofolio_web/drawer/drawer_view.dart';
 import 'package:portofolio_web/experience/experience_view.dart';
@@ -21,6 +22,7 @@ class PortfolioView extends StatefulWidget {
 }
 
 class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
+  final aboutMe = GlobalKey();
   final projectKey = GlobalKey();
   final skillsKey = GlobalKey();
   final experienceKey = GlobalKey();
@@ -34,6 +36,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   void afterFirstLayout(BuildContext context) {
     setState(() {
       navigationItems = [
+        NavigationItem('About Me', key: aboutMe),
         NavigationItem('Projects', key: projectKey),
         NavigationItem('Skills', key: skillsKey),
         NavigationItem('Experiences', key: experienceKey),
@@ -43,6 +46,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   }
 
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
@@ -65,6 +69,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
               children: [
                 NavigationBarView(),
                 HeaderView(),
+                AboutMe(key: aboutMe),
                 ProjectView(
                   key: projectKey,
                 ),

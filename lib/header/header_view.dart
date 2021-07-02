@@ -72,7 +72,7 @@ class HeaderMobileView extends StatelessWidget {
               child: Image.asset(
             'images/header.png',
           )),
-          SizedBox(height: 5),
+          SizedBox(height: 10),
           HeaderBody(
             isMobile: true,
           ),
