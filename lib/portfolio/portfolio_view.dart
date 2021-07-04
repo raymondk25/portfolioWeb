@@ -30,7 +30,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   List<NavigationItem> navigationItems = [];
 
   final ScrollController scrollController = ScrollController(
-    initialScrollOffset: 0,
+    initialScrollOffset: 900,
   );
   @override
   void afterFirstLayout(BuildContext context) {

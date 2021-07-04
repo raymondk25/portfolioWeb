@@ -1,8 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:portofolio_web/aboutMe/aboutMe_body.dart';
 import 'package:portofolio_web/components/desktop_view_builder.dart';
 import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
-import 'package:portofolio_web/utils/hover_extensions.dart';
+import 'package:portofolio_web/components/mobile_view_builder.dart';
 
 class AboutMe extends StatelessWidget {
   final bool isMobile;
@@ -45,48 +45,13 @@ class AboutMeDesktopView extends StatelessWidget {
         Row(
           children: [
             Image.asset(
-              'images/aboutMe.jpg',
+              'images/aboutMe3.jpg',
               height: isSmall ? imageWidth : 350,
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 40),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    AutoSizeText(
-                      'Hi there! My name is Raymond Kurniawan Liptro. I\'m a Flutter developer from Indonesia.',
-                      style: Theme.of(context).textTheme.headline4,
-                      maxLines: 2,
-                    ),
-                    SizedBox(height: 15),
-                    AutoSizeText(
-                      'I enjoy taking complex problems and turning them into simple and beautiful interface design. Currently learning flutter to build mobile and web application. In Summer 2020, I gathered my first experiences working in startups company.',
-                      style: Theme.of(context).textTheme.headline4,
-                      maxLines: 5,
-                    ),
-                    SizedBox(height: 40),
-                    FlatButton(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(7))),
-                        color: Colors.purple,
-                        onPressed: null,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                              vertical: 17, horizontal: 15),
-                          child: Row(children: [
-                            Text(
-                              'Download CV',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.black),
-                              maxLines: 1,
-                            ),
-                            Icon(Icons.download_rounded)
-                          ]),
-                        )).moveUpOnHover,
-                  ],
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: AboutMeBody(isSmall: true),
               ),
             ),
           ],
@@ -100,6 +65,13 @@ class AboutMeDesktopView extends StatelessWidget {
 class AboutMeMobileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MobileViewBuilder(titleText: AboutMe.title, children: [
+      Image.asset('images/aboutMe3.jpg'),
+      SizedBox(
+        height: 10,
+      ),
+      AboutMeBody(isSmall: true),
+      SizedBox(height: 70)
+    ]);
   }
 }

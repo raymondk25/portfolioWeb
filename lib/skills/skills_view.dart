@@ -69,6 +69,7 @@ class SkillsMobileView extends StatelessWidget {
           ),
           SizedBox(height: 10)
         ],
+        SizedBox(height: 70),
       ],
     );
   }

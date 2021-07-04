@@ -30,6 +30,7 @@ dependencies:
   font_awesome_flutter: ^9.1.0
   google_fonts: ^2.0.0
   intl: ^0.17.0
+  path_provider: ^2.0.2
   provider: ^5.0.0
   responsive_builder: ^0.4.1
   url_launcher: ^6.0.6
@@ -53,6 +54,8 @@ flutter:
     - images/header.png
     - images/navbar_logo.png
     - images/aboutMe.jpg
+    - images/aboutMe2.jpg
+    - images/aboutMe3.jpg
     - images/project_1.png
     - images/project_2.png
     - images/project_3.png
