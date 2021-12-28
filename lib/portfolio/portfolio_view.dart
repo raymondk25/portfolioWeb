@@ -1,4 +1,5 @@
 import 'package:after_layout/after_layout.dart';
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/aboutMe/aboutMe_view.dart';
 import 'package:portofolio_web/blog/blog_view.dart';
@@ -30,8 +31,9 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
   List<NavigationItem> navigationItems = [];
 
   final ScrollController scrollController = ScrollController(
-    initialScrollOffset: 900,
+    initialScrollOffset: 0,
   );
+
   @override
   void afterFirstLayout(BuildContext context) {
     setState(() {
@@ -67,16 +69,39 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
             controller: scrollController,
             child: Column(
               children: [
-                NavigationBarView(),
-                HeaderView(),
-                AboutMe(key: aboutMe),
-                ProjectView(
-                  key: projectKey,
+                FadeInDown(
+                    duration: Duration(milliseconds: 1300),
+                    child: NavigationBarView()),
+                FadeInDown(
+                    duration: Duration(milliseconds: 1300),
+                    child: HeaderView()),
+                FadeInDown(
+                    delay: Duration(milliseconds: 1300),
+                    duration: Duration(milliseconds: 2300),
+                    child: AboutMe(key: aboutMe)),
+                FadeInDown(
+                  delay: Duration(milliseconds: 2300),
+                  duration: Duration(milliseconds: 2300),
+                  child: ProjectView(
+                    key: projectKey,
+                  ),
                 ),
-                SkillsView(key: skillsKey),
-                ExperienceView(key: experienceKey),
-                BlogView(key: blogKey),
-                FooterView(),
+                FadeInDown(
+                    delay: Duration(milliseconds: 5300),
+                    duration: Duration(milliseconds: 2300),
+                    child: SkillsView(key: skillsKey)),
+                FadeInDown(
+                    delay: Duration(milliseconds: 5800),
+                    duration: Duration(milliseconds: 2300),
+                    child: ExperienceView(key: experienceKey)),
+                FadeInDown(
+                    delay: Duration(milliseconds: 6300),
+                    duration: Duration(milliseconds: 2300),
+                    child: BlogView(key: blogKey)),
+                FadeInDown(
+                    delay: Duration(milliseconds: 6800),
+                    duration: Duration(milliseconds: 2300),
+                    child: FooterView()),
               ],
             ),
           ),

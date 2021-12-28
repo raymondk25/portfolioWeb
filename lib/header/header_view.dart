@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
 import 'package:portofolio_web/constants.dart';
@@ -42,9 +43,13 @@ class HeaderDesktopView extends StatelessWidget {
             Expanded(
               child: HeaderBody(),
             ),
-            Image.asset(
-              'images/header.png',
-              height: isSmall ? imageWidth : 400,
+            FadeInLeftBig(
+              delay: Duration(milliseconds: 300),
+              duration: Duration(milliseconds: 3300),
+              child: Image.asset(
+                'images/header.png',
+                height: isSmall ? imageWidth : 400,
+              ),
             )
           ],
         ),

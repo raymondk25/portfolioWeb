@@ -20,14 +20,14 @@ class AboutMeBody extends StatelessWidget {
         SizedBox(height: 30),
         AutoSizeText(
           'Hi there! My name is Raymond Kurniawan Liptro. I\'m a Flutter developer from Indonesia.',
-          style: TextStyle(fontSize: 30),
-          maxLines: 2,
+          style: TextStyle(fontSize: isSmall ? 24 : 30),
+          maxLines: 3,
         ),
         SizedBox(height: 10),
         AutoSizeText(
           'I enjoy taking complex problems and turning them into simple and beautiful interface design. Currently learning flutter to build mobile and web application. In Summer 2020, I gathered my first experiences working in startups company.',
-          style: TextStyle(fontSize: 30),
-          maxLines: 5,
+          style: TextStyle(fontSize: isSmall ?? false ? 24 : 30),
+          maxLines: 7,
         ),
         SizedBox(height: isSmall ?? false ? 30 : 10),
         // ignore: deprecated_member_use

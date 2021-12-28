@@ -23,7 +23,7 @@ class ProjectItemBody extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           item.description,
-          style: TextStyle(fontSize: 17),
+          style: TextStyle(fontSize: 17, color: Colors.black45),
         ),
         SizedBox(height: 10),
         Row(

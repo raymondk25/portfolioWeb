@@ -68,7 +68,7 @@ String removeAllHtmlTags(String htmlText) {
   return htmlText.replaceAll(exp, '');
 }
 
-String converDate(String dateText) {
+String convertDate(String dateText) {
   final date = DateFormat('EEE, dd MMM yyyy HH:mm:ss zzz').parse(dateText);
   return DateFormat('d MMMM yyyy').format(date);
 }

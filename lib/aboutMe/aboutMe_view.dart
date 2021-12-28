@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/aboutMe/aboutMe_body.dart';
 import 'package:portofolio_web/components/desktop_view_builder.dart';
@@ -44,9 +45,13 @@ class AboutMeDesktopView extends StatelessWidget {
         ),
         Row(
           children: [
-            Image.asset(
-              'images/aboutMe3.jpg',
-              height: isSmall ? imageWidth : 350,
+            FadeInRight(
+              delay: Duration(milliseconds: 800),
+              duration: Duration(milliseconds: 3300),
+              child: Image.asset(
+                'images/aboutMe3.jpg',
+                height: isSmall ? imageWidth : 350,
+              ),
             ),
             Expanded(
               child: Padding(

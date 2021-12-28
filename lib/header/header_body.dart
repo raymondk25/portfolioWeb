@@ -19,10 +19,10 @@ class HeaderBody extends StatelessWidget {
       children: [
         AutoSizeText(
           'Hi! I\'m Raymond',
-          style: Theme.of(context).textTheme.headline2,
+          style: isMobile == false ? Theme.of(context).textTheme.headline4 : Theme.of(context).textTheme.headline2,
           maxLines: 1,
         ),
-        // ignore: deprecated_member_use
+        SizedBox(height: 5,),
         TypewriterAnimatedTextKit(
           text: [
             'Frontend-Developer',
@@ -31,7 +31,7 @@ class HeaderBody extends StatelessWidget {
             'Blogger'
           ],
           textStyle: const TextStyle(
-              fontSize: 40, fontWeight: FontWeight.bold, color: Colors.blue),
+              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
           displayFullTextOnTap: true,
           stopPauseOnTap: true,
           speed: const Duration(milliseconds: 100),
