@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/project/project_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectItemBody extends StatelessWidget {
   const ProjectItemBody({
@@ -16,9 +17,12 @@ class ProjectItemBody extends StatelessWidget {
       children: [
         Image.asset(item.image),
         SizedBox(height: 15),
-        Text(
-          item.title,
-          style: Theme.of(context).textTheme.headline4,
+        TextButton(
+          onPressed: () => launch(item.url),
+          child: Text(
+            item.title,
+            style: Theme.of(context).textTheme.headline4,
+          ),
         ),
         SizedBox(height: 10),
         Text(
