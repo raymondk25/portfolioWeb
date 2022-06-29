@@ -87,10 +87,10 @@ final experiences = [
         '- Created a 3x3 grid Website with  Flutter'
       ]),
   ExperienceInfo(
-      company: 'Auto Pet Feeding Machine @ University Final Project',
-      timeline: 'October 2020 - May 2021 (8 months)',
+      company: 'Flutter Developer Intern @ 台灣基達科技股份有限公司',
+      timeline: 'January 2022 - Present',
       descriptions: [
-        '- Built Auto Pet Feeding Machine',
-        '- Worked in a team of 3 developers'
+        '- Currently, building a mobile app for iOS and Android',
+        '- Analyze and optimize app performance',
       ]),
 ];

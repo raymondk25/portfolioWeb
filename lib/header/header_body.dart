@@ -19,16 +19,20 @@ class HeaderBody extends StatelessWidget {
       children: [
         AutoSizeText(
           'Hi! I\'m Raymond',
-          style: isMobile == false ? Theme.of(context).textTheme.headline4 : Theme.of(context).textTheme.headline2,
+          style: isMobile == false
+              ? Theme.of(context).textTheme.headline4
+              : Theme.of(context).textTheme.headline2,
           maxLines: 1,
         ),
-        SizedBox(height: 5,),
+        SizedBox(
+          height: 5,
+        ),
         TypewriterAnimatedTextKit(
           text: [
             'Frontend-Developer',
             'Flutter Developer',
             'UI/UX Designer',
-            'Blogger'
+            // 'Blogger'
           ],
           textStyle: const TextStyle(
               fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
