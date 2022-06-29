@@ -2,7 +2,6 @@ import 'package:after_layout/after_layout.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:portofolio_web/aboutMe/aboutMe_view.dart';
-import 'package:portofolio_web/blog/blog_view.dart';
 import 'package:portofolio_web/drawer/drawer_view.dart';
 import 'package:portofolio_web/experience/experience_view.dart';
 import 'package:portofolio_web/footer/footer_view.dart';
@@ -42,7 +41,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
         NavigationItem('Projects', key: projectKey),
         NavigationItem('Skills', key: skillsKey),
         NavigationItem('Experiences', key: experienceKey),
-        NavigationItem('Blog', key: blogKey),
+        // NavigationItem('Blog', key: blogKey),
       ];
     });
   }
@@ -94,10 +93,10 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                     delay: Duration(milliseconds: 5800),
                     duration: Duration(milliseconds: 2300),
                     child: ExperienceView(key: experienceKey)),
-                FadeInDown(
-                    delay: Duration(milliseconds: 6300),
-                    duration: Duration(milliseconds: 2300),
-                    child: BlogView(key: blogKey)),
+                // FadeInDown(
+                //     delay: Duration(milliseconds: 6300),
+                //     duration: Duration(milliseconds: 2300),
+                //     child: BlogView(key: blogKey)),
                 FadeInDown(
                     delay: Duration(milliseconds: 6800),
                     duration: Duration(milliseconds: 2300),
