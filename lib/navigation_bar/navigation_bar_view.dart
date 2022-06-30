@@ -120,7 +120,7 @@ class NavigationBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSmall = MediaQuery.of(context).size.width < 650;
+    final isSmall = MediaQuery.of(context).size.width < 725;
     return Container(
       padding: const EdgeInsets.only(left: 49),
       child: InkWell(
