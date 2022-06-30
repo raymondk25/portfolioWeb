@@ -17,8 +17,8 @@ class ProjectItemBody extends StatelessWidget {
       children: [
         Image.asset(item.image),
         SizedBox(height: 15),
-        TextButton(
-          onPressed: () => launch(item.url),
+        GestureDetector(
+          onTap: () => launch(item.url),
           child: Text(
             item.title,
             style: Theme.of(context).textTheme.headline4,
@@ -27,7 +27,7 @@ class ProjectItemBody extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           item.description,
-          style: TextStyle(fontSize: 17, color: Colors.black45),
+          style: Theme.of(context).textTheme.headline6,
         ),
         SizedBox(height: 10),
         Row(
