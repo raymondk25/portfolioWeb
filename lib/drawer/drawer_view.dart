@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
+import 'package:portofolio_web/navigation_bar/navigation_bar_controller.dart';
 import 'package:portofolio_web/portfolio/portfolio_view.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +20,8 @@ class DrawerMobileView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NavigationBarController navigationBarController =
+        Get.put(NavigationBarController());
     final navigationItems = context.watch<List<NavigationItem>>();
     final scrollController = context.watch<ScrollController>();
 
@@ -37,6 +41,15 @@ class DrawerMobileView extends StatelessWidget {
                   end: Alignment.bottomLeft,
                   colors: [Colors.blue, Colors.red]),
             ),
+          ),
+          ListTile(
+            title: Text('Dark Mode'),
+            trailing: Obx(
+              () => Switch(
+                  value: navigationBarController.isDarkMode.value,
+                  onChanged: (value) => navigationBarController.darkMode()),
+            ),
+            onTap: () {},
           ),
           for (var item in navigationItems)
             ListTile(

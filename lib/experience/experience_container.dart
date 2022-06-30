@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portofolio_web/utils/colour_assets.dart';
 
 class ExperienceContainer extends StatelessWidget {
@@ -25,18 +26,18 @@ class ExperienceContainer extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           experience.company,
-          style: textStyle(isBold: true),
+          style: Theme.of(context).textTheme.headline5,
         ),
         SizedBox(height: 10),
         Text(
           experience.timeline,
-          style: textStyle(isGrey: true),
+          style: GoogleFonts.montserrat(fontSize: 20, color: Colors.grey),
         ),
         SizedBox(height: 10),
         for (var item in experience.descriptions)
           Text(
             item,
-            style: textStyle(isBold: false),
+            style: Theme.of(context).textTheme.headline5,
           )
       ]),
     );
@@ -79,12 +80,12 @@ final experiences = [
         '- Worked in a team of 2 developers',
       ]),
   ExperienceInfo(
-      company: 'Intern Frontend Web Developer @ 雲耕隊 (YPCloud)',
+      company: 'Front-end Developer Intern @ 雲耕隊 (YPCloud)',
       timeline: 'June 2020 - Sept 2020 (4 months)',
       descriptions: [
-        '- Learnt new programming languages such as Node-Red & Flutter',
-        '- Created a bot in telegram and use it for notification information from website by using Node-Red to Web scripting',
-        '- Created a 3x3 grid Website with  Flutter'
+        '- Learned new programming languages',
+        '- Created a bot on telegram to give a notification information by Web scrapping with Node-RED',
+        '- Created a 3x3 grid Website with Flutter'
       ]),
   ExperienceInfo(
       company: 'Flutter Developer Intern @ 台灣基達科技股份有限公司',

@@ -69,37 +69,37 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
             child: Column(
               children: [
                 FadeInDown(
-                    duration: Duration(milliseconds: 1300),
+                    duration: Duration(milliseconds: 1000),
                     child: NavigationBarView()),
                 FadeInDown(
-                    duration: Duration(milliseconds: 1300),
+                    duration: Duration(milliseconds: 1000),
                     child: HeaderView()),
                 FadeInDown(
-                    delay: Duration(milliseconds: 1300),
-                    duration: Duration(milliseconds: 2300),
+                    delay: Duration(milliseconds: 1000),
+                    duration: Duration(milliseconds: 2000),
                     child: AboutMe(key: aboutMe)),
                 FadeInDown(
-                  delay: Duration(milliseconds: 2300),
-                  duration: Duration(milliseconds: 2300),
+                  delay: Duration(milliseconds: 2000),
+                  duration: Duration(milliseconds: 2000),
                   child: ProjectView(
                     key: projectKey,
                   ),
                 ),
                 FadeInDown(
-                    delay: Duration(milliseconds: 5300),
-                    duration: Duration(milliseconds: 2300),
+                    delay: Duration(milliseconds: 4000),
+                    duration: Duration(milliseconds: 2000),
                     child: SkillsView(key: skillsKey)),
                 FadeInDown(
-                    delay: Duration(milliseconds: 5800),
-                    duration: Duration(milliseconds: 2300),
+                    delay: Duration(milliseconds: 5000),
+                    duration: Duration(milliseconds: 2000),
                     child: ExperienceView(key: experienceKey)),
                 // FadeInDown(
                 //     delay: Duration(milliseconds: 6300),
-                //     duration: Duration(milliseconds: 2300),
+                //     duration: Duration(milliseconds: 2000),
                 //     child: BlogView(key: blogKey)),
                 FadeInDown(
-                    delay: Duration(milliseconds: 6800),
-                    duration: Duration(milliseconds: 2300),
+                    delay: Duration(milliseconds: 6000),
+                    duration: Duration(milliseconds: 2000),
                     child: FooterView()),
               ],
             ),

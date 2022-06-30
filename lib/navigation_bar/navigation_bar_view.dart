@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
 import 'package:portofolio_web/constants.dart';
+import 'package:portofolio_web/navigation_bar/navigation_bar_controller.dart';
 import 'package:portofolio_web/portfolio/portfolio_view.dart';
-import 'package:provider/provider.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
+
+import 'package:provider/provider.dart';
 
 class NavigationBarView extends StatelessWidget {
   @override
@@ -21,8 +25,11 @@ class NavigationDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    NavigationBarController navigationBarController =
+        Get.put(NavigationBarController());
     final navigationItems = context.watch<List<NavigationItem>>();
     final scrollController = context.watch<ScrollController>();
+
     return Container(
       height: 100,
       width: 1200,
@@ -30,11 +37,19 @@ class NavigationDesktopView extends StatelessWidget {
         padding: kScreenPadding,
         child: Row(
           children: [
-            GestureDetector(
-              onTap: () => html.window.open('https://raymondk25.me/', '_self'),
-              child: Image.asset(
-                'images/navbar_logo.png',
-                height: 36,
+            Obx(
+              () => GestureDetector(
+                onTap: () =>
+                    html.window.open('https://raymondk25.me/', '_self'),
+                child: navigationBarController.isDarkMode.value
+                    ? Image.asset(
+                        'images/navbar_logo_dm.png',
+                        height: 36,
+                      )
+                    : Image.asset(
+                        'images/navbar_logo.png',
+                        height: 36,
+                      ),
               ),
             ),
             Spacer(),
@@ -45,7 +60,17 @@ class NavigationDesktopView extends StatelessWidget {
                         duration: Duration(milliseconds: 1000),
                         curve: Curves.easeInOut);
                   },
-                  text: item.text)
+                  text: item.text),
+            SizedBox(
+              width: 50,
+            ),
+            Obx(
+              () => GestureDetector(
+                  onTap: () => navigationBarController.darkMode(),
+                  child: navigationBarController.isDarkMode.value
+                      ? Icon(Icons.dark_mode)
+                      : Icon(Icons.light_mode)),
+            ),
           ],
         ),
       ),
@@ -66,9 +91,12 @@ class NavigationMobileView extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 20),
-          Image.asset(
-            'images/navbar_logo.png',
-            height: 24,
+          GestureDetector(
+            onTap: () => html.window.open('https://raymondk25.me/', '_self'),
+            child: Image.asset(
+              'images/navbar_logo.png',
+              height: 24,
+            ),
           ),
           Spacer(),
           IconButton(
@@ -92,7 +120,7 @@ class NavigationBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSmall = MediaQuery.of(context).size.width < 650;
+    final isSmall = MediaQuery.of(context).size.width < 725;
     return Container(
       padding: const EdgeInsets.only(left: 49),
       child: InkWell(
