@@ -36,7 +36,7 @@ class AboutMeBody extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(10))),
           color: Colors.blue,
           onPressed: () => launch(
-              "https://s3.amazonaws.com/archivos-cvonline/assets/pdf/1145726/Raymond_Resume_2021.pdf"),
+              "https://drive.google.com/file/d/1KW5lDhnkeN4wW3SaALLo74Rg_UL-rDN8/view"),
           child: Padding(
             padding: EdgeInsets.symmetric(
                 horizontal: isSmall ?? false ? 5 : 10,

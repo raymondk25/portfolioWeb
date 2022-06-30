@@ -33,7 +33,7 @@ class FooterDesktopView extends StatelessWidget {
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             hoverColor: Colors.transparent,
-            onTap: () => launch('https://github.com/raymondk25/portofolio_web'),
+            onTap: () => launch('https://github.com/raymondk25/portfolioWeb'),
           ),
           Spacer(),
           for (var social in socials)

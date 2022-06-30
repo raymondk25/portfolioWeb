@@ -3,6 +3,7 @@ import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
 import 'package:portofolio_web/constants.dart';
 import 'package:portofolio_web/portfolio/portfolio_view.dart';
 import 'package:provider/provider.dart';
+import 'dart:html' as html;
 
 class NavigationBarView extends StatelessWidget {
   @override
@@ -29,9 +30,12 @@ class NavigationDesktopView extends StatelessWidget {
         padding: kScreenPadding,
         child: Row(
           children: [
-            Image.asset(
-              'images/navbar_logo.png',
-              height: 36,
+            GestureDetector(
+              onTap: () => html.window.open('https://raymondk25.me/', '_self'),
+              child: Image.asset(
+                'images/navbar_logo.png',
+                height: 36,
+              ),
             ),
             Spacer(),
             for (var item in navigationItems)
