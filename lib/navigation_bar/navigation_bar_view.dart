@@ -79,9 +79,8 @@ class NavigationDesktopView extends StatelessWidget {
 }
 
 class NavigationMobileView extends StatelessWidget {
-  const NavigationMobileView({
-    Key key,
-  }) : super(key: key);
+  NavigationBarController navigationBarController =
+      Get.put(NavigationBarController());
 
   @override
   Widget build(BuildContext context) {
@@ -91,11 +90,18 @@ class NavigationMobileView extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(width: 20),
-          GestureDetector(
-            onTap: () => html.window.open('https://raymondk25.me/', '_self'),
-            child: Image.asset(
-              'images/navbar_logo.png',
-              height: 24,
+          Obx(
+            () => GestureDetector(
+              onTap: () => html.window.open('https://raymondk25.me/', '_self'),
+              child: navigationBarController.isDarkMode.value
+                  ? Image.asset(
+                      'images/navbar_logo_dm.png',
+                      height: 36,
+                    )
+                  : Image.asset(
+                      'images/navbar_logo.png',
+                      height: 36,
+                    ),
             ),
           ),
           Spacer(),

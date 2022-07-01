@@ -75,8 +75,8 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                     duration: Duration(milliseconds: 1000),
                     child: HeaderView()),
                 FadeInDown(
-                    delay: Duration(milliseconds: 1000),
-                    duration: Duration(milliseconds: 2000),
+                    delay: Duration(milliseconds: 500),
+                    duration: Duration(milliseconds: 1500),
                     child: AboutMe(key: aboutMe)),
                 FadeInDown(
                   delay: Duration(milliseconds: 2000),
@@ -86,11 +86,11 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                   ),
                 ),
                 FadeInDown(
-                    delay: Duration(milliseconds: 4000),
+                    delay: Duration(milliseconds: 5000),
                     duration: Duration(milliseconds: 2000),
                     child: SkillsView(key: skillsKey)),
                 FadeInDown(
-                    delay: Duration(milliseconds: 5000),
+                    delay: Duration(milliseconds: 5500),
                     duration: Duration(milliseconds: 2000),
                     child: ExperienceView(key: experienceKey)),
                 // FadeInDown(
@@ -98,7 +98,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin {
                 //     duration: Duration(milliseconds: 2000),
                 //     child: BlogView(key: blogKey)),
                 FadeInDown(
-                    delay: Duration(milliseconds: 6000),
+                    delay: Duration(milliseconds: 5500),
                     duration: Duration(milliseconds: 2000),
                     child: FooterView()),
               ],
