@@ -15,14 +15,12 @@ class ProjectItemBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(item.image),
-        SizedBox(height: 15),
         GestureDetector(
-          onTap: () => launch(item.url),
-          child: Text(
-            item.title,
-            style: Theme.of(context).textTheme.headline4,
-          ),
+            onTap: () => launch(item.url), child: Image.asset(item.image)),
+        SizedBox(height: 15),
+        Text(
+          item.title,
+          style: Theme.of(context).textTheme.headline4,
         ),
         SizedBox(height: 10),
         Text(
