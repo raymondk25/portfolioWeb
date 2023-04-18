@@ -65,33 +65,26 @@ class ExperienceInfo {
 
 final experiences = [
   ExperienceInfo(
-      company: 'Quality Check (QC) @ 啟碁科技股份有限公司 (WNC)',
-      timeline: 'June 2019- August 2019 (3 months)',
-      descriptions: [
-        '- Controlled the whole procedure of production',
-        '- Proven ability to assist machine operators, assemblers and other worker',
-        '- Ensured the quality of the end products'
-      ]),
+      company: 'Flutter Web Developer Intern @ 雲耕隊 (YPCloud)',
+      timeline: 'June 2020 - Sept 2020 (4 months)',
+      descriptions: ['- Learned Flutter for web development', '- Build a simple web with Flutter']),
   ExperienceInfo(
       company: 'App Developer @ 博睿科技 (Brilltek) | Start up',
-      timeline: 'Sept 2020 - Oct 2020 (1 month)',
+      timeline: 'Sept 2020 - Oct 2020 (2 month)',
       descriptions: [
         '- Design business card for mobile app',
+        '- Translating design into UI code',
         '- Worked in a team of 2 developers',
       ]),
   ExperienceInfo(
-      company: 'Front-end Developer Intern @ 雲耕隊 (YPCloud)',
-      timeline: 'June 2020 - Sept 2020 (4 months)',
-      descriptions: [
-        '- Learned new programming languages',
-        '- Created a bot on telegram to give a notification information by Web scrapping with Node-RED',
-        '- Created a 3x3 grid Website with Flutter'
-      ]),
-  ExperienceInfo(
       company: 'Flutter Developer Intern @ 台灣基達科技股份有限公司',
-      timeline: 'January 2022 - Present',
+      timeline: 'January 2022 - August 2022 (9 months)',
       descriptions: [
-        '- Currently, building a mobile app for iOS and Android',
-        '- Analyze and optimize app performance',
+        '- Learned how to use GetX and Firebase',
+        '- Build a mobile app for iOS and Android',
       ]),
+  ExperienceInfo(company: 'Flutter Developer @ 台灣基達科技股份有限公司', timeline: 'Desember 2022- Present', descriptions: [
+    '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',
+    '- Build the designs from wireframes into high quality code',
+  ]),
 ];

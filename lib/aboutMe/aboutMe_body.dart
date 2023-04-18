@@ -10,6 +10,7 @@ class AboutMeBody extends StatelessWidget {
   }) : super(key: key);
 
   final bool isSmall;
+  final String cvLink = "https://drive.google.com/file/d/1dSW2f60JcaKk4kkbpDtoKuIFYdxFWa0Z/view";
 
   @override
   Widget build(BuildContext context) {
@@ -31,21 +32,20 @@ class AboutMeBody extends StatelessWidget {
         ),
         SizedBox(height: isSmall ?? false ? 30 : 10),
         // ignore: deprecated_member_use
-        FlatButton(
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(10))),
-          color: Colors.blue,
-          onPressed: () => launch(
-              "https://drive.google.com/file/d/1KW5lDhnkeN4wW3SaALLo74Rg_UL-rDN8/view"),
+        TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.blue,
+            padding: const EdgeInsets.all(16.0),
+            textStyle: const TextStyle(fontSize: 20),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+          ),
+          onPressed: () => launch(cvLink),
           child: Padding(
-            padding: EdgeInsets.symmetric(
-                horizontal: isSmall ?? false ? 5 : 10,
-                vertical: isSmall ?? false ? 5 : 10),
+            padding: EdgeInsets.symmetric(horizontal: isSmall ?? false ? 5 : 10, vertical: isSmall ?? false ? 5 : 10),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
                 'Download Resume ',
-                style: TextStyle(
-                    fontSize: isSmall ?? false ? 16 : 20, color: Colors.white),
+                style: TextStyle(fontSize: isSmall ?? false ? 16 : 20, color: Colors.white),
                 maxLines: 1,
               ),
               Icon(
