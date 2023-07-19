@@ -48,10 +48,8 @@ class HeaderBody extends StatelessWidget {
         // ignore: deprecated_member_use
         TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: Colors.redAccent,
-              padding: const EdgeInsets.all(16.0),
-              textStyle: const TextStyle(fontSize: 20),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(7))),
+              backgroundColor: Colors.redAccent,
             ),
             onPressed: () => launch('mailto:raymondtaiwan25@gmail.com?subject=News&body=New%20plugin'),
             child: Padding(

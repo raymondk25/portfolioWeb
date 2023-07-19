@@ -34,12 +34,10 @@ class AboutMeBody extends StatelessWidget {
         // ignore: deprecated_member_use
         TextButton(
           style: TextButton.styleFrom(
-            backgroundColor: Colors.blue,
-            padding: const EdgeInsets.all(16.0),
-            textStyle: const TextStyle(fontSize: 20),
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10))),
+            backgroundColor: Colors.blue,
           ),
-          onPressed: () => launch(cvLink),
+          onPressed: () => launch("https://drive.google.com/file/d/1KW5lDhnkeN4wW3SaALLo74Rg_UL-rDN8/view"),
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: isSmall ?? false ? 5 : 10, vertical: isSmall ?? false ? 5 : 10),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [

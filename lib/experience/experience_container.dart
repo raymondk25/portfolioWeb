@@ -67,9 +67,12 @@ final experiences = [
   ExperienceInfo(
       company: 'Flutter Web Developer Intern @ 雲耕隊 (YPCloud)',
       timeline: 'June 2020 - Sept 2020 (4 months)',
-      descriptions: ['- Learned Flutter for web development', '- Build a simple web with Flutter']),
+      descriptions: [
+        '- Learned Flutter for web development',
+        '- Build a simple web with Flutter',
+      ]),
   ExperienceInfo(
-      company: 'App Developer @ 博睿科技 (Brilltek) | Start up',
+      company: 'App Developer Part-time @ 博睿科技 (Brilltek)',
       timeline: 'Sept 2020 - Oct 2020 (2 month)',
       descriptions: [
         '- Design business card for mobile app',
@@ -78,10 +81,17 @@ final experiences = [
       ]),
   ExperienceInfo(
       company: 'Flutter Developer Intern @ 台灣基達科技股份有限公司',
-      timeline: 'January 2022 - August 2022 (9 months)',
+      timeline: 'January 2022 - August 2022 (8 months)',
       descriptions: [
         '- Learned how to use GetX and Firebase',
         '- Build a mobile app for iOS and Android',
+      ]),
+  ExperienceInfo(
+      company: 'Flutter Developer @ 台灣基達科技股份有限公司',
+      timeline: 'Desember 2022- June 2023 (7 months)',
+      descriptions: [
+        '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',
+        '- Build the designs from wireframse into high quality code',
       ]),
   ExperienceInfo(company: 'Flutter Developer @ 台灣基達科技股份有限公司', timeline: 'Desember 2022- Present', descriptions: [
     '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',

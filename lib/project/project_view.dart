@@ -23,6 +23,25 @@ class ProjectItem {
 
 final kProjectItems = [
   ProjectItem(
+      url: 'https://github.com/raymondk25/ChatGPT-Flutter',
+      image: 'images/chatGPT_clone.png',
+      title: 'ChatGPT Clone',
+      description:
+          "Discover the new way of communication and productivity with ChatGPT, powered by OpenAI's advanced technology",
+      technologies: ['Flutter', 'OpenAI API']),
+  ProjectItem(
+      url: 'https://github.com/raymondk25/news_app',
+      image: 'images/news_app.png',
+      title: 'News App',
+      description: "Build a fully functional News app from scratch using 2 different Rest APIs",
+      technologies: ['Flutter', 'API', 'Firebase']),
+  ProjectItem(
+      url: 'https://github.com/raymondk25/store_api_flutter',
+      image: 'images/store_app.png',
+      title: 'Store App',
+      description: 'Build a mini Store app with Rest API from scratch',
+      technologies: ['Flutter', 'API']),
+  ProjectItem(
     url: 'https://github.com/raymondk25/Find-Party-Event-Flutter',
     image: 'images/eventz.png',
     title: 'EventZ',
@@ -33,16 +52,7 @@ final kProjectItems = [
     url: 'https://github.com/raymondk25/Movie-Description-Flutter',
     image: 'images/momovie.png',
     title: 'MOMOVIE',
-    description:
-        "Discover what to watch: popular tv shows, trending movies, top rated movies",
-    technologies: ['Flutter', 'API'],
-  ),
-  ProjectItem(
-    url: 'https://github.com/raymondk25/Food-Recipe-Flutter',
-    image: 'images/food_recipes.png',
-    title: 'ChefBook',
-    description:
-        "This app will makes your cooking easier, faster, and more convenient.",
+    description: "Discover what to watch: popular tv shows, trending movies, top rated movies",
     technologies: ['Flutter', 'API'],
   ),
   ProjectItem(
@@ -53,32 +63,17 @@ final kProjectItems = [
           "This crypto tracker app allows you to access real-time market data for Bitcoin, Ethereum and Binance Coin",
       technologies: ['Flutter', 'API']),
   ProjectItem(
-      url: 'https://github.com/raymondk25/Todoey-Flutter',
-      image: 'images/todoey_app.png',
-      title: 'Todoey',
-      description:
-          "Todoey is the task management app that makes it easy to stay organised and manage your life",
-      technologies: ['Flutter']),
-  ProjectItem(
-      url: 'https://github.com/raymondk25/welcome_page-Flutter',
-      image: 'images/welcome_screen.png',
-      title: 'Welcome Page',
-      description:
-          'Welcome page is a first screen that appears when you first time download the app',
-      technologies: ['Flutter', 'Firebase']),
-  ProjectItem(
-      url: 'https://github.com/raymondk25/Animated-login-page-Flutter',
-      image: 'images/login_pages.png',
-      title: 'Login Page',
-      description:
-          'A login page is an entry app by entering a username and password',
-      technologies: ['Flutter']),
+    url: 'https://github.com/raymondk25/Food-Recipe-Flutter',
+    image: 'images/food_recipes.png',
+    title: 'ChefBook',
+    description: "This app will makes your cooking easier, faster, and more convenient.",
+    technologies: ['Flutter', 'API'],
+  ),
   ProjectItem(
       url: 'https://github.com/raymondk25/Flash-Chat-Flutter',
       image: 'images/chat_screen.png',
       title: 'Flash Chat',
-      description:
-          'Flash Chat is a modern messaging app where users can sign up and log in to chat',
+      description: 'Flash Chat is a modern messaging app where users can sign up and log in to chat',
       technologies: ['Flutter', 'Firebase']),
   ProjectItem(
     url: 'https://github.com/raymondk25/BMI-Calculator-Flutter',
@@ -98,8 +93,7 @@ class ProjectView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MobileDesktopViewBuilder(
-        mobileView: ProjectMobileView(), desktopView: ProjectDesktopView());
+    return MobileDesktopViewBuilder(mobileView: ProjectMobileView(), desktopView: ProjectDesktopView());
   }
 }
 
