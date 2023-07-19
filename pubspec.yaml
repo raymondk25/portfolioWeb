@@ -6,7 +6,7 @@ publish_to: null
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.8.0 <3.0.0"
 
 dependencies:
   after_layout: ^1.1.0
@@ -43,11 +43,9 @@ flutter:
     - images/bmi-calculator.png
     - images/chat_screen.png
     - images/coin_tracker.png
-    - images/login_page.png
-    - images/todoey_app.png
-    - images/welcome_screen.png
-    - images/login_pages.png
+    - images/chatGPT_clone.png
+    - images/news_App.png
     - images/momovie.png
     - images/eventz.png
     - images/food_recipes.png
-    - images/otp_verify.png
+    - images/store_app.png
