@@ -10,6 +10,7 @@ class AboutMeBody extends StatelessWidget {
   }) : super(key: key);
 
   final bool isSmall;
+  final String cvLink = "https://drive.google.com/file/d/1dSW2f60JcaKk4kkbpDtoKuIFYdxFWa0Z/view";
 
   @override
   Widget build(BuildContext context) {
