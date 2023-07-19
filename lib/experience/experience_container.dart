@@ -93,8 +93,4 @@ final experiences = [
         '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',
         '- Build the designs from wireframse into high quality code',
       ]),
-  ExperienceInfo(company: 'Flutter Developer @ 台灣基達科技股份有限公司', timeline: 'Desember 2022- Present', descriptions: [
-    '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',
-    '- Build the designs from wireframes into high quality code',
-  ]),
 ];
