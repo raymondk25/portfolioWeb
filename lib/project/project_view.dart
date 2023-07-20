@@ -27,17 +27,17 @@ final kProjectItems = [
       image: 'images/chatGPT_clone.png',
       title: 'ChatGPT Clone',
       description:
-          "Discover the new way of communication and productivity with ChatGPT, powered by OpenAI's advanced technology",
+          "Discover a new way of communication and productivity with ChatGPT, powered by OpenAI's advanced technology",
       technologies: ['Flutter', 'OpenAI API']),
   ProjectItem(
       url: 'https://github.com/raymondk25/news_app',
-      image: 'images/news_app.png',
+      image: 'images/news.png',
       title: 'News App',
       description: "Build a fully functional News app from scratch using 2 different Rest APIs",
       technologies: ['Flutter', 'API', 'Firebase']),
   ProjectItem(
       url: 'https://github.com/raymondk25/store_api_flutter',
-      image: 'images/store_app.png',
+      image: 'images/store.png',
       title: 'Store App',
       description: 'Build a mini Store app with Rest API from scratch',
       technologies: ['Flutter', 'API']),

@@ -36,16 +36,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - images/header.png
-    - images/navbar_logo.png
-    - images/navbar_logo_dm.png
-    - images/aboutMe3.jpg
-    - images/bmi-calculator.png
-    - images/chat_screen.png
-    - images/coin_tracker.png
-    - images/chatGPT_clone.png
-    - images/news_app.png
-    - images/momovie.png
-    - images/eventz.png
-    - images/food_recipes.png
-    - images/store_app.png
+    - images/

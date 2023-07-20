@@ -91,6 +91,6 @@ final experiences = [
       timeline: 'Desember 2022- June 2023 (7 months)',
       descriptions: [
         '- Building the Chongpuu mobile app on both iOS/Android platforms with Flutter',
-        '- Build the designs from wireframse into high quality code',
+        '- Build the designs from wireframse into high-quality code',
       ]),
 ];
