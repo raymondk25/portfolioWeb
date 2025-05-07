@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 class BackToTopButton extends StatelessWidget {
   const BackToTopButton({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

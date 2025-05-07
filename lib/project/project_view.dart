@@ -13,11 +13,11 @@ class ProjectItem {
   final String url;
 
   ProjectItem({
-    @required this.image,
-    @required this.title,
-    @required this.description,
-    @required this.technologies,
-    @required this.url,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.technologies,
+    required this.url,
   });
 }
 
@@ -33,7 +33,8 @@ final kProjectItems = [
       url: 'https://github.com/raymondk25/news_app',
       image: 'images/news.png',
       title: 'News App',
-      description: "Build a fully functional News app from scratch using 2 different Rest APIs",
+      description:
+          "Build a fully functional News app from scratch using 2 different Rest APIs",
       technologies: ['Flutter', 'API', 'Firebase']),
   ProjectItem(
       url: 'https://github.com/raymondk25/store_api_flutter',
@@ -52,7 +53,8 @@ final kProjectItems = [
     url: 'https://github.com/raymondk25/Movie-Description-Flutter',
     image: 'images/momovie.png',
     title: 'MOMOVIE',
-    description: "Discover what to watch: popular tv shows, trending movies, top rated movies",
+    description:
+        "Discover what to watch: popular tv shows, trending movies, top rated movies",
     technologies: ['Flutter', 'API'],
   ),
   ProjectItem(
@@ -66,14 +68,16 @@ final kProjectItems = [
     url: 'https://github.com/raymondk25/Food-Recipe-Flutter',
     image: 'images/food_recipes.png',
     title: 'ChefBook',
-    description: "This app will makes your cooking easier, faster, and more convenient.",
+    description:
+        "This app will makes your cooking easier, faster, and more convenient.",
     technologies: ['Flutter', 'API'],
   ),
   ProjectItem(
       url: 'https://github.com/raymondk25/Flash-Chat-Flutter',
       image: 'images/chat_screen.png',
       title: 'Flash Chat',
-      description: 'Flash Chat is a modern messaging app where users can sign up and log in to chat',
+      description:
+          'Flash Chat is a modern messaging app where users can sign up and log in to chat',
       technologies: ['Flutter', 'Firebase']),
   ProjectItem(
     url: 'https://github.com/raymondk25/BMI-Calculator-Flutter',
@@ -87,17 +91,20 @@ final kProjectItems = [
 
 class ProjectView extends StatelessWidget {
   const ProjectView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Projects';
 
   @override
   Widget build(BuildContext context) {
-    return MobileDesktopViewBuilder(mobileView: ProjectMobileView(), desktopView: ProjectDesktopView());
+    return MobileDesktopViewBuilder(
+        mobileView: ProjectMobileView(), desktopView: ProjectDesktopView());
   }
 }
 
 class ProjectDesktopView extends StatelessWidget {
+  const ProjectDesktopView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(
@@ -156,6 +163,8 @@ class ProjectDesktopView extends StatelessWidget {
 }
 
 class ProjectMobileView extends StatelessWidget {
+  const ProjectMobileView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MobileViewBuilder(

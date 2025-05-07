@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:portofolio_web/experience/experience_container.dart';
@@ -8,9 +7,9 @@ import 'package:portofolio_web/utils/hover_extensions.dart';
 
 class BlogCard extends StatelessWidget {
   const BlogCard({
-    Key key,
-    this.isMobile,
-    this.article,
+    Key? key,
+    required this.isMobile,
+    required this.article,
   }) : super(key: key);
 
   final bool isMobile;
@@ -22,7 +21,15 @@ class BlogCard extends StatelessWidget {
       highlightColor: Colors.transparent,
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
-      onTap: () => launch(article.link),
+      onTap: () async {
+        final String? articleLink = article.link;
+        if (articleLink != null) {
+          final Uri url = Uri.parse(articleLink);
+          if (await canLaunchUrl(url)) {
+            await launchUrl(url);
+          }
+        }
+      },
       child: Card(
         elevation: 5,
         margin: EdgeInsets.all(8),
@@ -33,13 +40,13 @@ class BlogCard extends StatelessWidget {
               color: Colors.redAccent,
               width: double.infinity,
               padding: EdgeInsets.symmetric(
-                  horizontal: 10, vertical: isMobile ?? false ? 20 : 30),
+                  horizontal: 10, vertical: isMobile ? 20 : 30),
               child: Text(
-                article.title,
+                article.title ?? 'Untitled Article',
                 style: Theme.of(context)
                     .textTheme
-                    .headline4
-                    .copyWith(color: Colors.white),
+                    .headlineMedium
+                    ?.copyWith(color: Colors.white),
               ),
             ),
             Padding(
@@ -48,7 +55,9 @@ class BlogCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    removeAllHtmlTags(article.content.value),
+                    article.content?.value != null
+                        ? removeAllHtmlTags(article.content!.value)
+                        : 'No content available',
                     style: textStyle(),
                     maxLines: 3,
                   ),

@@ -7,11 +7,11 @@ class MyTheme {
     colorScheme: ColorScheme.dark(),
     primarySwatch: Colors.blue,
     textTheme: TextTheme(
-      headline2: GoogleFonts.montserrat(color: Colors.white),
-      headline3: GoogleFonts.montserrat(color: Colors.white),
-      headline4: GoogleFonts.montserrat(fontSize: 30, color: Colors.white),
-      headline5: GoogleFonts.montserrat(fontSize: 20, color: Colors.white),
-      headline6: GoogleFonts.montserrat(fontSize: 15, color: Colors.white),
+      displayMedium: GoogleFonts.montserrat(color: Colors.white),
+      displaySmall: GoogleFonts.montserrat(color: Colors.white),
+      headlineMedium: GoogleFonts.montserrat(fontSize: 30, color: Colors.white),
+      titleLarge: GoogleFonts.montserrat(fontSize: 20, color: Colors.white),
+      titleMedium: GoogleFonts.montserrat(fontSize: 15, color: Colors.white),
     ),
   );
 
@@ -20,11 +20,11 @@ class MyTheme {
     colorScheme: ColorScheme.light(),
     primarySwatch: Colors.blue,
     textTheme: TextTheme(
-      headline2: GoogleFonts.montserrat(color: Colors.black),
-      headline3: GoogleFonts.montserrat(color: Colors.black),
-      headline4: GoogleFonts.montserrat(fontSize: 30, color: Colors.black),
-      headline5: GoogleFonts.montserrat(fontSize: 20, color: Colors.black),
-      headline6: GoogleFonts.montserrat(fontSize: 16, color: Colors.black),
+      displayMedium: GoogleFonts.montserrat(color: Colors.black),
+      displaySmall: GoogleFonts.montserrat(color: Colors.black),
+      headlineMedium: GoogleFonts.montserrat(fontSize: 30, color: Colors.black),
+      titleLarge: GoogleFonts.montserrat(fontSize: 20, color: Colors.black),
+      titleMedium: GoogleFonts.montserrat(fontSize: 16, color: Colors.black),
     ),
   );
 }

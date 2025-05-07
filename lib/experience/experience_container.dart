@@ -4,9 +4,9 @@ import 'package:portofolio_web/utils/colour_assets.dart';
 
 class ExperienceContainer extends StatelessWidget {
   const ExperienceContainer({
-    Key key,
-    @required this.experience,
-    @required this.index,
+    Key? key,
+    required this.experience,
+    required this.index,
   }) : super(key: key);
 
   final ExperienceInfo experience;
@@ -26,7 +26,7 @@ class ExperienceContainer extends StatelessWidget {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           experience.company,
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         SizedBox(height: 10),
         Text(
@@ -37,14 +37,14 @@ class ExperienceContainer extends StatelessWidget {
         for (var item in experience.descriptions)
           Text(
             item,
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.titleLarge,
           )
       ]),
     );
   }
 }
 
-TextStyle textStyle({bool isBold, bool isGrey}) {
+TextStyle textStyle({bool? isBold, bool? isGrey}) {
   return TextStyle(
       fontSize: 20,
       fontWeight: isBold ?? false ? FontWeight.bold : FontWeight.normal,
@@ -57,9 +57,9 @@ class ExperienceInfo {
   final String timeline;
   final List<String> descriptions;
   ExperienceInfo({
-    @required this.company,
-    @required this.timeline,
-    @required this.descriptions,
+    required this.company,
+    required this.timeline,
+    required this.descriptions,
   });
 }
 

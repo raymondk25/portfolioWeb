@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
 
-const num kInitWidth = 1280;
-const kScreenPadding = const EdgeInsets.symmetric(horizontal: 20);
+const double kInitWidth = 1280;
+const kScreenPadding = EdgeInsets.symmetric(horizontal: 20);

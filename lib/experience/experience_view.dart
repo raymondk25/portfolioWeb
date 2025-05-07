@@ -6,7 +6,7 @@ import 'package:portofolio_web/experience/experience_container.dart';
 
 class ExperienceView extends StatelessWidget {
   const ExperienceView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Experience';
 
@@ -20,6 +20,8 @@ class ExperienceView extends StatelessWidget {
 }
 
 class ExperienceDesktopView extends StatelessWidget {
+  const ExperienceDesktopView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return DesktopViewBuilder(
@@ -55,6 +57,8 @@ class ExperienceDesktopView extends StatelessWidget {
 }
 
 class ExperienceMobileView extends StatelessWidget {
+  const ExperienceMobileView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MobileViewBuilder(

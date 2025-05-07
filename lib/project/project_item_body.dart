@@ -4,8 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class ProjectItemBody extends StatelessWidget {
   const ProjectItemBody({
-    Key key,
-    @required this.item,
+    Key? key,
+    required this.item,
   }) : super(key: key);
 
   final ProjectItem item;
@@ -16,16 +16,22 @@ class ProjectItemBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         GestureDetector(
-            onTap: () => launch(item.url), child: Image.asset(item.image)),
+            onTap: () async {
+              final Uri url = Uri.parse(item.url);
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
+            },
+            child: Image.asset(item.image)),
         SizedBox(height: 15),
         Text(
           item.title,
-          style: Theme.of(context).textTheme.headline4,
+          style: Theme.of(context).textTheme.headlineMedium,
         ),
         SizedBox(height: 10),
         Text(
           item.description,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleMedium,
         ),
         SizedBox(height: 10),
         Row(
