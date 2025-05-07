@@ -6,7 +6,7 @@ import 'package:portofolio_web/skills/outline_skills_container.dart';
 
 class SkillsView extends StatelessWidget {
   const SkillsView({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static const title = 'Skills';
 
@@ -22,7 +22,7 @@ class SkillsView extends StatelessWidget {
 
 class SkillsDesktopView extends StatelessWidget {
   const SkillsDesktopView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -54,7 +54,7 @@ class SkillsDesktopView extends StatelessWidget {
 
 class SkillsMobileView extends StatelessWidget {
   const SkillsMobileView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

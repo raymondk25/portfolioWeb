@@ -8,7 +8,7 @@ import 'package:portofolio_web/components/mobile_view_builder.dart';
 class AboutMe extends StatelessWidget {
   final bool isMobile;
   const AboutMe({
-    Key key,
+    Key? key,
     this.isMobile = true,
   }) : super(key: key);
   static const title = 'About Me';
@@ -27,9 +27,9 @@ class AboutMe extends StatelessWidget {
 
 class AboutMeDesktopView extends StatelessWidget {
   const AboutMeDesktopView({
-    Key key,
-    @required this.isSmall,
-    @required this.imageWidth,
+    Key? key,
+    required this.isSmall,
+    required this.imageWidth,
   }) : super(key: key);
 
   final bool isSmall;
@@ -68,6 +68,8 @@ class AboutMeDesktopView extends StatelessWidget {
 }
 
 class AboutMeMobileView extends StatelessWidget {
+  const AboutMeMobileView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MobileViewBuilder(titleText: AboutMe.title, children: [

@@ -6,7 +6,7 @@ import 'package:portofolio_web/header/header_body.dart';
 
 class HeaderView extends StatelessWidget {
   const HeaderView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -23,9 +23,9 @@ class HeaderView extends StatelessWidget {
 
 class HeaderDesktopView extends StatelessWidget {
   const HeaderDesktopView({
-    Key key,
-    @required this.isSmall,
-    @required this.imageWidth,
+    Key? key,
+    required this.isSmall,
+    required this.imageWidth,
   }) : super(key: key);
 
   final bool isSmall;
@@ -60,7 +60,7 @@ class HeaderDesktopView extends StatelessWidget {
 
 class HeaderMobileView extends StatelessWidget {
   const HeaderMobileView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

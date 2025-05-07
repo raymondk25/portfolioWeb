@@ -7,7 +7,7 @@ class MobileViewBuilder extends StatelessWidget {
   final List<Widget> children;
 
   const MobileViewBuilder(
-      {Key key, @required this.titleText, @required this.children})
+      {Key? key, required this.titleText, required this.children})
       : super(key: key);
   @override
   Widget build(BuildContext context) => Container(
@@ -19,7 +19,7 @@ class MobileViewBuilder extends StatelessWidget {
             SizedBox(height: 40),
             AutoSizeText(
               titleText,
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
               maxLines: 1,
             ),
             SizedBox(height: 40),

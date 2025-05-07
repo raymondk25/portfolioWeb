@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portofolio_web/utils/my_theme.dart';
 
 class NavigationBarController extends GetxController {
-  var isDarkMode = false.obs;
+  final isDarkMode = false.obs;
 
-  darkMode() async {
+  void darkMode() {
     isDarkMode.value = !isDarkMode.value;
-    isDarkMode.value
-        ? Get.changeTheme(ThemeData.dark())
-        : Get.changeTheme(ThemeData.light());
+    Get.changeTheme(isDarkMode.value ? MyTheme.darkTheme : MyTheme.lightTheme);
   }
 }

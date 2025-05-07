@@ -6,6 +6,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:portofolio_web/utils/hover_extensions.dart';
 
 class FooterView extends StatelessWidget {
+  const FooterView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
@@ -14,6 +16,8 @@ class FooterView extends StatelessWidget {
 }
 
 class FooterDesktopView extends StatelessWidget {
+  const FooterDesktopView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final currentYear = DateTime.now().year;
@@ -29,18 +33,29 @@ class FooterDesktopView extends StatelessWidget {
               'See the source code',
               style: TextStyle(decoration: TextDecoration.underline),
             ),
-            mouseCursor: MaterialStateMouseCursor.clickable,
+            mouseCursor: WidgetStateMouseCursor.clickable,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             hoverColor: Colors.transparent,
-            onTap: () => launch('https://github.com/raymondk25/portfolioWeb'),
+            onTap: () async {
+              final Uri url =
+                  Uri.parse('https://github.com/raymondk25/portfolioWeb');
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
+            },
           ),
           Spacer(),
           for (var social in socials)
             IconButton(
               icon: social.icon,
               color: Colors.redAccent,
-              onPressed: () => launch(social.url),
+              onPressed: () async {
+                final Uri url = Uri.parse(social.url);
+                if (await canLaunchUrl(url)) {
+                  await launchUrl(url);
+                }
+              },
               splashColor: Colors.transparent,
               highlightColor: Colors.transparent,
               hoverColor: Colors.transparent,
@@ -53,8 +68,11 @@ class FooterDesktopView extends StatelessWidget {
 }
 
 class FooterMobileView extends StatelessWidget {
-  final currentYear = DateTime.now().year;
+  const FooterMobileView({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
+    final currentYear = DateTime.now().year;
     return Container(
       padding: kScreenPadding,
       height: 150,
@@ -68,7 +86,12 @@ class FooterMobileView extends StatelessWidget {
                 IconButton(
                   icon: social.icon,
                   color: Colors.redAccent,
-                  onPressed: () => launch(social.url),
+                  onPressed: () async {
+                    final Uri url = Uri.parse(social.url);
+                    if (await canLaunchUrl(url)) {
+                      await launchUrl(url);
+                    }
+                  },
                   splashColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   hoverColor: Colors.transparent,
@@ -86,11 +109,17 @@ class FooterMobileView extends StatelessWidget {
               'See the source code',
               style: TextStyle(decoration: TextDecoration.underline),
             ),
-            mouseCursor: MaterialStateMouseCursor.clickable,
+            mouseCursor: WidgetStateMouseCursor.clickable,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
             hoverColor: Colors.transparent,
-            onTap: () => launch('https://github.com/raymondk25/portofolio_web'),
+            onTap: () async {
+              final Uri url =
+                  Uri.parse('https://github.com/raymondk25/portofolio_web');
+              if (await canLaunchUrl(url)) {
+                await launchUrl(url);
+              }
+            },
           ),
         ],
       ),
@@ -103,8 +132,8 @@ class SocialInfo {
   final String url;
 
   SocialInfo({
-    @required this.icon,
-    @required this.url,
+    required this.icon,
+    required this.url,
   });
 }
 

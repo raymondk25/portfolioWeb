@@ -6,33 +6,36 @@ publish_to: null
 version: 1.4.1+12
 
 environment:
-  sdk: ">=2.8.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   after_layout: ^1.1.0
   animate_do: ^2.0.0
   animated_text_kit: ^4.2.1
-  auto_size_text: ^2.1.0
+  auto_size_text: ^3.0.0
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   font_awesome_flutter: ^9.1.0
   get: ^4.6.5
   getxbottombar: ^0.0.1
-  google_fonts: ^2.0.0
+  google_fonts: ^4.0.0
   intl: ^0.17.0
   path_provider: ^2.0.2
   provider: ^6.0.3
   responsive_builder: ^0.4.1
-  url_launcher: ^6.0.6
+  url_launcher: ^6.1.12
   webfeed: ^0.7.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter:
+dependency_overrides:
+  get:
+    path: ./packages/get
 
+flutter:
   uses-material-design: true
 
   assets:

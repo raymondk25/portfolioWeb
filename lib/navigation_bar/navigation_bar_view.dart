@@ -4,12 +4,13 @@ import 'package:portofolio_web/components/mobile_desktop_view_builder.dart';
 import 'package:portofolio_web/constants.dart';
 import 'package:portofolio_web/navigation_bar/navigation_bar_controller.dart';
 import 'package:portofolio_web/portfolio/portfolio_view.dart';
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
 import 'package:provider/provider.dart';
 
 class NavigationBarView extends StatelessWidget {
+  const NavigationBarView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MobileDesktopViewBuilder(
@@ -20,7 +21,7 @@ class NavigationBarView extends StatelessWidget {
 
 class NavigationDesktopView extends StatelessWidget {
   const NavigationDesktopView({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -79,8 +80,12 @@ class NavigationDesktopView extends StatelessWidget {
 }
 
 class NavigationMobileView extends StatelessWidget {
-  NavigationBarController navigationBarController =
-      Get.put(NavigationBarController());
+  // Making the controller final
+  final NavigationBarController navigationBarController;
+
+  NavigationMobileView({Key? key})
+      : navigationBarController = Get.put(NavigationBarController()),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -116,9 +121,9 @@ class NavigationMobileView extends StatelessWidget {
 
 class NavigationBarItem extends StatelessWidget {
   const NavigationBarItem({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   final void Function() onPressed;
@@ -131,7 +136,7 @@ class NavigationBarItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 49),
       child: InkWell(
         onTap: onPressed,
-        mouseCursor: MaterialStateMouseCursor.clickable,
+        mouseCursor: MouseCursor.defer, // Updated from MaterialStateMouseCursor
         hoverColor: Colors.transparent,
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,
